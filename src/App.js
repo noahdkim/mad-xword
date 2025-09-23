@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Crossword from '@jaredreisinger/react-crossword';
+import React, { useState, useRef } from 'react';
+import Crossword, { isCrosswordCorrect } from '@jaredreisinger/react-crossword';
 
 const crosswordData = {
   across: {
@@ -16,19 +16,27 @@ const crosswordData = {
 };
 
 const App = () => {
-  const [unlocked, setUnlocked] = useState(true);
+  const [unlocked, setUnlocked] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [showGif, setShowGif] = useState(false);
   const [passInput, setPassInput] = useState('');
+  const crosswordRef = useRef(null);
 
-  const passphrase = 'noahsthebestatpips';
+  const passphrase = 'password';
 
+  const handleCheck = () => {
+    if (crosswordRef.current && crosswordRef.current.isCrosswordCorrect()) {
+      setCorrect(true);
+    } else {
+      alert('Not quite right yet! Keep trying.');
+    }
+  };
 
   return (
     <div style={{ padding: '1rem', textAlign: 'center' }}>
       {!unlocked ? (
         <div style={{ marginTop: '20vh' }}>
-          <h2>Enter passphrase</h2>
+          <h2>Noah is shy. Help him say the right words to Maddie!</h2>
           <input
             type="password"
             value={passInput}
@@ -44,6 +52,13 @@ const App = () => {
           >
             Enter
           </button>
+          <div style={{ marginTop: '1rem' }}>
+            <img
+              src="/noah-sprite.png"
+              alt="Cute sprite"
+              style={{ width: '100px', height: 'auto' }}
+            />
+          </div>
         </div>
       ) : correct ? (
         <div>
@@ -59,7 +74,7 @@ const App = () => {
                   cursor: 'pointer'
                 }}
               >
-                Click to celebrate 🎉
+                Let's go find Maddie!
               </button>
             </div>
           ) : (
@@ -71,11 +86,11 @@ const App = () => {
           )}
         </div>
       ) : (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
           <div style={{ width: '100%', maxWidth: '500px' }}>
             <Crossword
+              ref={crosswordRef}
               data={crosswordData}
-              onCrosswordCorrect={()=>setCorrect(true)}
               theme={{
                 cellBackground: '#fff',
                 cellBorder: '#000',
@@ -86,6 +101,17 @@ const App = () => {
               }}
             />
           </div>
+          <button
+            onClick={handleCheck}
+            style={{
+              marginTop: '1rem',
+              padding: '0.5rem 1rem',
+              fontSize: '1rem',
+              cursor: 'pointer'
+            }}
+          >
+            Check Answers
+          </button>
         </div>
       )}
     </div>

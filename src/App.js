@@ -54,7 +54,7 @@ const App = () => {
           </button>
           <div style={{ marginTop: '1rem' }}>
             <img
-              src="/noah-sprite.png"
+              src="noah-sprite.png"
               alt="Cute sprite"
               style={{ width: '100px', height: 'auto' }}
             />
@@ -79,7 +79,7 @@ const App = () => {
             </div>
           ) : (
             <img
-              src="/celebration.gif"
+              src="celebration.gif"
               alt="Celebration GIF"
               style={{ maxWidth: '100%', height: 'auto' }}
             />

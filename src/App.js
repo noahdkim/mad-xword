@@ -3,7 +3,7 @@ import Crossword from '@jaredreisinger/react-crossword';
 
 const crosswordData = {
   across: {
-    1: { clue: 'Scrambled yam for permission?', answer: 'MAY', row: 0, col: 2 },
+    1: { clue: 'The month of scrambled yam', answer: 'MAY', row: 0, col: 2 },
     3: { clue: 'Eco-friendly color in envy', answer: 'GREEN', row: 3, col: 3 },
     5: { clue: 'A letter to flowers', answer: 'BEE', row: 5, col: 5 },
     6: { clue: 'According to poets, uttered long ago, belonging to you', answer: 'YOUR', row: 4, col: 0 },

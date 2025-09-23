@@ -81,7 +81,7 @@ const App = () => {
                   cursor: 'pointer',
                 }}
               >
-                Click to celebrate 🎉
+                Let's go find Maddie! 🎉
               </button>
             </div>
           ) : (

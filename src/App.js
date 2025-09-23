@@ -36,7 +36,7 @@ const App = () => {
     <div style={{ padding: '1rem', textAlign: 'center' }}>
       {!unlocked ? (
         <div style={{ marginTop: '20vh' }}>
-          <h2>Noah is shy. Help him say the right words to Maddie!</h2>
+          <h2>Noah's kinda shy. Help him say the right words to Maddie!</h2>
           <input
             type="password"
             value={passInput}

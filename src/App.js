@@ -362,7 +362,7 @@ const App = () => {
     <div style={{ padding: '1rem', textAlign: 'center' }}>
       {!unlocked ? (
         <div style={{ marginTop: '20vh' }}>
-          <h2>It's been a few months now and things have been going well!</h2>
+          <h2>Let's find some things to show Maddie how much we love her!</h2>
           <input
             type="password"
             value={passInput}

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import CrosswordCell from './components/CrosswordCell';
 
 // Custom crossword with rebus support
 const crosswordData = {

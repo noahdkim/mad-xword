@@ -406,8 +406,8 @@ const App = () => {
           ) : (
             <div>
               <img
-                src="celebration.gif"
-                alt="Celebration GIF"
+                src="vday.gif"
+                alt="VDAY GIF"
                 style={{ maxWidth: '100%', height: 'auto' }}
               />
               {showButtons && (

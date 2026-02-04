@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import CrosswordCell from './components/CrosswordCell';
 
 // Custom crossword with rebus support
 const crosswordData = {
@@ -362,7 +363,7 @@ const App = () => {
     <div style={{ padding: '1rem', textAlign: 'center' }}>
       {!unlocked ? (
         <div style={{ marginTop: '20vh' }}>
-          <h2>Let's find some things to show Maddie how much we love her!</h2>
+          <h2>Let's help Noah find a gift for Maddie!</h2>
           <input
             type="password"
             value={passInput}
@@ -412,33 +413,7 @@ const App = () => {
               />
               {showButtons && (
                 <div style={{ marginTop: '1rem' }}>
-                  <button
-                    onClick={() => alert('yay!')}
-                    style={{
-                      marginRight: '1rem',
-                      padding: '0.5rem 1rem',
-                      backgroundColor: 'green',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '5px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Yes
-                  </button>
-                  <button
-                    onClick={() => alert('yay!')}
-                    style={{
-                      padding: '0.5rem 1rem',
-                      backgroundColor: 'red',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '5px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Yes but in red
-                  </button>
+                 <h1>If you were a Pokemon, I'd choose you! <3</h1>
                 </div>
               )}
             </div>

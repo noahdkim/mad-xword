@@ -413,7 +413,7 @@ const App = () => {
               />
               {showButtons && (
                 <div style={{ marginTop: '1rem' }}>
-                 <h1>If you were a Pokemon, I'd choose you! <3</h1>
+                 <h1>If you were a Pokemon, I'd choose you!</h1>
                 </div>
               )}
             </div>
